@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formvalidation</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>form validation</h1>
+    <form id="myform" onsubmit="return validationForm()">
+        <label>Name=</label>
+        <input type="text" name="Name" id="name" placeholder="name" size="20px" required >
+        <span id="firstNameerror" class="error"></span>
+        <label>Age = </label>
+        <input type="text" name="Age" id="age" placeholder="age" style="margin-top: 10px;" required>
+        <span id="ageerror" class="error"></span>
+        <label>phone=</label>
+        <input type="text" name="phone" id="phone" placeholder="phone" style="margin-top: 10px;" required>
+        <span id="phoneerror" class="error"></span>
+        <label>Email=</label>
+        <input type="email" name="Email" id="email" placeholder="email" style="margin-top: 10px;" required>
+        <span id="emailerror" class="error"></span>
+        <button>submit</button>
+    </form>
+</body>
+<script>
+    function validationForm(){
+        let isvalid=true;
+
+        document.getElementById("firstNameerror").textContent="";
+        document.getElementById("ageerror").textContent="";
+        document.getElementById("phoneerror").textContent="";
+        document.getElementById("emailerror").textContent="";
+
+        const firstName=document.getElementById("name").value.trim();
+        if(!firstName){
+            document.getElementById("firstNameerror").textContent="please fill the info";
+            isvalid=false
+        }const Age=document.getElementById("age").value.trim();
+        if(!Age){
+            document.getElementById("ageerror").textContent="please fill the info";
+            isvalid=false
+        }const phone=document.getElementById("phone").value.trim();
+        if(!firstName){
+            document.getElementById("phoneerror").textContent="please fill the info";
+            isvalid=false
+        }const email=document.getElementById("email").value.trim();
+        if(!firstName){
+            document.getElementById("emailerror").textContent="please fill the info";
+            isvalid=false
+        }
+        
+    }
+</script>
+</html>

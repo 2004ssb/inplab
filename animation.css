@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative; /* Position relative for animation */
+    transition: background-color 0.5s; /* Smooth color transition */
+}
